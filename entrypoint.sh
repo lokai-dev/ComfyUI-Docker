@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-# ComfyUI Docker Startup File 
+# ComfyUI Docker Startup File
 
 set -e
+
+echo "↳ Installing/upgrading dependencies for nunchaku…"
+pip install https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1dev20250930/nunchaku-1.0.1.dev20250930+torch2.8-cp313-cp313-linux_x86_64.whl
 
 CN_DIR=/app/ComfyUI/custom_nodes
 INIT_MARKER="$CN_DIR/.custom_nodes_initialized"
